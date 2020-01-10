@@ -35,10 +35,11 @@ a:active {
 }
 .contacts {
 	font-family: $secondary-font;
+	display: flex;
 	&__item {
-		padding-left: 25px;
+		padding-left: 20px;
 		background-repeat: no-repeat;
-		background-position: 5px center;
+		background-position: left center;
 	}
 	&__item--location {
 		background-image: url('../images/header-location.png');
@@ -55,12 +56,37 @@ a:active {
 }
 .social-links {
 	font-family: 'icomoon';
+	display: flex;
+	justify-content: space-between;
 	&__link {
 		margin-left: 20px;
 		transition: 0.8s;
 		&:hover,
 		&:active {
 			color: $link-bg;
+		}
+	}
+}
+@media screen and (max-width: 968px) {
+	.header__contacts {
+		flex-direction: column;
+		padding-top: 15px;
+		&-item {
+			margin-bottom: 15px;
+		}
+	}
+}
+@media screen and (max-width: 530px) {
+	.header__top-inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.header__social-links {
+		width: 100%;
+		margin-bottom: 15px;
+		.header__social-link {
+			margin-left: 0;
+			margin-right: 20px;
 		}
 	}
 }

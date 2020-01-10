@@ -33,11 +33,12 @@ a:active {
 
 .contacts {
   font-family: "Raleway", sans-serif;
+  display: flex;
 }
 .contacts__item {
-  padding-left: 25px;
+  padding-left: 20px;
   background-repeat: no-repeat;
-  background-position: 5px center;
+  background-position: left center;
 }
 .contacts__item--location {
   background-image: url("../images/header-location.png");
@@ -55,6 +56,8 @@ a:active {
 
 .social-links {
   font-family: "icomoon";
+  display: flex;
+  justify-content: space-between;
 }
 .social-links__link {
   margin-left: 20px;
@@ -62,6 +65,31 @@ a:active {
 }
 .social-links__link:hover, .social-links__link:active {
   color: #f6a937;
+}
+
+@media screen and (max-width: 968px) {
+  .header__contacts {
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  .header__contacts-item {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .header__top-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__social-links {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .header__social-links .header__social-link {
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
