@@ -2,6 +2,66 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
+  color: #fff;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__top {
+  background-color: #1175b7;
+}
+.header__top-inner {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts {
+  font-family: "Raleway", sans-serif;
+}
+.contacts__item {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+.contacts__item--location {
+  background-image: url("../images/header-location.png");
+}
+.contacts__item--tel {
+  background-image: url("../images/header-phone.png");
+}
+.contacts__item--time {
+  background-image: url("../images/header-time@1x.png");
+}
+
+.header__contacts-item {
+  margin-right: 30px;
+}
+
+.social-links {
+  font-family: "icomoon";
+}
+.social-links__link {
+  margin-left: 20px;
+  transition: 0.8s;
+}
+.social-links__link:hover, .social-links__link:active {
+  color: #f6a937;
 }
 
 /*# sourceMappingURL=main.css.map */
