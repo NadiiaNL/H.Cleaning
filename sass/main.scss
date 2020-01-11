@@ -72,6 +72,7 @@ a:active {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
 	a:not(.btn-orange) {
 		color: $primary-bg;
 	}
@@ -83,6 +84,39 @@ a:active {
 	font-size: 32px;
 	font-weight: 700;
 }
+.icon-menu {
+	cursor: pointer;
+	display: none;
+	background-color: transparent;
+	padding: 0 5px;
+	transition: 0.4s;
+	&__top,
+	&__middle,
+	&__bottom {
+		width: 35px;
+		height: 5px;
+		background-color: $primary-bg;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+}
+.icon-menu:hover {
+	background-color: $link-bg;
+}
+.icon-menu:hover .icon-menu__line {
+	background-color: $primary-color-text;
+}
+.change .icon-menu__top {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .icon-menu__middle {
+	opacity: 0;
+}
+.change .icon-menu__bottom {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
 .menu {
 	font-size: 18px;
 	font-weight: 600;
@@ -92,9 +126,27 @@ a:active {
 		margin-right: 15px;
 	}
 }
+.header__bottom-inner .header__menu.responsive {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 75%;
+	left: 0;
+	text-align: left;
+	& .menu__link {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 15px;
+	}
+	& .menu__link:hover {
+		color: $link-bg;
+		background-color: rgba($primary-bg, 0.2);
+	}
+}
 .btn-orange {
 	color: $primary-color-text;
 	background-color: $link-bg;
+	white-space: nowrap;
 }
 .header__btn-orange {
 	padding: 15px;
@@ -107,6 +159,26 @@ a:active {
 		&-item {
 			margin-bottom: 15px;
 		}
+	}
+	.header__bottom-inner {
+		flex-wrap: wrap;
+		.header__menu {
+			order: 3;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.header__menu,
+	.header__btn-orange {
+		display: none;
+	}
+	.header__btn-orange {
+		order: 5;
+	}
+	.icon-menu {
+		display: block;
 	}
 }
 @media screen and (max-width: 530px) {

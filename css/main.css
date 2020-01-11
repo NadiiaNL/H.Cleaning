@@ -72,6 +72,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header__bottom-inner a:not(.btn-orange) {
   color: #1175b7;
@@ -86,6 +87,43 @@ a:active {
   font-weight: 700;
 }
 
+.icon-menu {
+  cursor: pointer;
+  display: none;
+  background-color: transparent;
+  padding: 0 5px;
+  transition: 0.4s;
+}
+.icon-menu__top, .icon-menu__middle, .icon-menu__bottom {
+  width: 35px;
+  height: 5px;
+  background-color: #1175b7;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.icon-menu:hover {
+  background-color: #f6a937;
+}
+
+.icon-menu:hover .icon-menu__line {
+  background-color: #fff;
+}
+
+.change .icon-menu__top {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .icon-menu__middle {
+  opacity: 0;
+}
+
+.change .icon-menu__bottom {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .menu {
   font-size: 18px;
   font-weight: 600;
@@ -96,9 +134,28 @@ a:active {
   margin-right: 15px;
 }
 
+.header__bottom-inner .header__menu.responsive {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 75%;
+  left: 0;
+  text-align: left;
+}
+.header__bottom-inner .header__menu.responsive .menu__link {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 15px;
+}
+.header__bottom-inner .header__menu.responsive .menu__link:hover {
+  color: #f6a937;
+  background-color: rgba(17, 117, 183, 0.2);
+}
+
 .btn-orange {
   color: #fff;
   background-color: #f6a937;
+  white-space: nowrap;
 }
 
 .header__btn-orange {
@@ -113,6 +170,29 @@ a:active {
   }
   .header__contacts-item {
     margin-bottom: 15px;
+  }
+
+  .header__bottom-inner {
+    flex-wrap: wrap;
+  }
+  .header__bottom-inner .header__menu {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__menu,
+.header__btn-orange {
+    display: none;
+  }
+
+  .header__btn-orange {
+    order: 5;
+  }
+
+  .icon-menu {
+    display: block;
   }
 }
 @media screen and (max-width: 530px) {
