@@ -171,6 +171,10 @@ a:active {
 }
 
 /*Intro section*/
+.intro {
+  margin-bottom: 120px;
+}
+
 .intro__slider {
   position: relative;
 }
@@ -234,6 +238,76 @@ a:active {
   padding: 15px 30px;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+.about {
+  margin-bottom: 120px;
+}
+.about__inner {
+  background-image: url("../images/about-bg.jpg");
+  background-repeat: no-repeat;
+}
+.about__inner .about__text {
+  background-color: #1175b7;
+  max-width: 540px;
+  width: 100%;
+  padding: 150px 40px 20px 70px;
+  min-height: 540px;
+  margin-left: auto;
+  font-size: 18px;
+  border-left: 30px solid #fff;
+  border-bottom: 30px solid #fff;
+}
+.about__inner .about__text .about__subtitle {
+  font-family: "Raleway", sans-serif;
+  line-height: 16px;
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.about__inner .about__text .about__subtitle:before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background-color: #f6a937;
+}
+.about__inner .about__text .about__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 43px;
+  line-height: 53px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.about__inner .about__text .about__desc {
+  line-height: 26px;
+}
+
+.about__call {
+  background-color: #f6a937;
+  background-image: url("../images/about-call.png");
+  background-repeat: no-repeat;
+  background-position: 60px center;
+  max-width: 445px;
+  width: 100%;
+  padding: 50px 35px 50px 140px;
+  border-radius: 3px;
+  font-weight: 700;
+  display: block;
+  margin-left: auto;
+}
+.about__call-to {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+.about__call-number {
+  font-size: 35px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 @media screen and (max-width: 968px) {

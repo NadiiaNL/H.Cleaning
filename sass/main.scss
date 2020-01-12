@@ -163,6 +163,9 @@ a:active {
 	padding: 15px;
 }
 /*Intro section*/
+.intro {
+	margin-bottom: 120px;
+}
 .intro__slider {
 	position: relative;
 	.slick-dots {
@@ -226,6 +229,75 @@ a:active {
 		font-size: 18px;
 	}
 }
+.about {
+	margin-bottom: 120px;
+	&__inner {
+		background-image: url('../images/about-bg.jpg');
+		background-repeat: no-repeat;
+		.about__text {
+			background-color: $primary-bg;
+			max-width: 540px;
+			width: 100%;
+			padding: 150px 40px 20px 70px;
+			min-height: 540px;
+			margin-left: auto;
+			font-size: 18px;
+			border-left: 30px solid $primary-color-text;
+			border-bottom: 30px solid $primary-color-text;
+			.about__subtitle {
+				font-family: $secondary-font;
+				line-height: 16px;
+				position: relative;
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+			.about__subtitle:before {
+				content: '';
+				position: absolute;
+				top: -23px;
+				left: 0;
+				width: 30px;
+				height: 4px;
+				background-color: $link-bg;
+			}
+			.about__title {
+				font-family: $secondary-font;
+				font-size: 43px;
+				line-height: 53px;
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+			.about__desc {
+				line-height: 26px;
+			}
+		}
+	}
+}
+.about__call {
+	background-color: $link-bg;
+	background-image: url('../images/about-call.png');
+	background-repeat: no-repeat;
+	background-position: 60px center;
+	max-width: 445px;
+	width: 100%;
+	padding: 50px 35px 50px 140px;
+	border-radius: 3px;
+	font-weight: 700;
+	display: block;
+	margin-left: auto;
+	&-to {
+		font-family: $secondary-font;
+		font-size: 18px;
+		display: block;
+		margin-bottom: 10px;
+	}
+	&-number {
+		font-size: 35px;
+		margin-bottom: 10px;
+		display: block;
+	}
+}
+
 @media screen and (max-width: 968px) {
 	.header__contacts {
 		flex-direction: column;
