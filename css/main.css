@@ -67,12 +67,15 @@ a:active {
   color: #f6a937;
 }
 
+.header__bottom {
+  position: relative;
+}
+
 .header__bottom-inner {
   min-height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 .header__bottom-inner a:not(.btn-orange) {
   color: #1175b7;
@@ -142,6 +145,7 @@ a:active {
   left: 0;
   text-align: left;
   background-color: #fff;
+  padding-bottom: 5px;
   z-index: 6;
 }
 .header__bottom-inner .header__menu.responsive .menu__link {
@@ -209,24 +213,27 @@ a:active {
   background-position: center;
   min-height: 800px;
   text-align: center;
+  font-size: 18px;
 }
 .intro__slider-item .intro__slider-subtitle {
-  font-size: 27px;
+  font-size: 1.5em;
   line-height: 16px;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0.7em;
 }
 .intro__slider-item .intro__slider-title {
   font-family: "Nunito", sans-serif;
-  font-size: 64px;
+  font-size: 3.6em;
   line-height: 70px;
   font-weight: 800;
-  margin-bottom: 30px;
+  max-width: 910px;
+  margin: 0 auto 0.3em;
 }
 .intro__slider-item .intro__slider-btn {
   padding: 15px 30px;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 968px) {
@@ -260,6 +267,11 @@ a:active {
   .icon-menu {
     display: block;
   }
+
+  .intro__slider-item {
+    font-size: 12px;
+    min-height: 500px;
+  }
 }
 @media screen and (max-width: 530px) {
   .header__top-inner {
@@ -274,6 +286,20 @@ a:active {
   .header__social-links .header__social-link {
     margin-left: 0;
     margin-right: 20px;
+  }
+
+  .intro__slider-item {
+    font-size: 9px;
+    min-height: 415px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .intro__slider-item {
+    font-size: 7px;
+    min-height: 350px;
+  }
+  .intro__slider-item .intro__slider-title {
+    line-height: 40px;
   }
 }
 
