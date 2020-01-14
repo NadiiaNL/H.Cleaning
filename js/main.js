@@ -16,3 +16,13 @@ $('.intro__slider').slick({
 	dots: true,
 	arrows: false
 });
+$('.services__slider').slick({
+	infinite: true,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: true,
+	prevArrow:
+		'<button type="button" class="services__slider-button services-prev">&#xf053;</button>',
+	nextArrow:
+		'<button type="button" class="services__slider-button services-next">&#xf054;</button>'
+});
