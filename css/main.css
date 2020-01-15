@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
@@ -259,13 +260,18 @@ a:active {
   border-bottom: 30px solid #fff;
 }
 .about__inner .about__text .about__subtitle {
-  font-family: "Raleway", sans-serif;
-  line-height: 20px;
   position: relative;
   margin-bottom: 10px;
-  font-weight: 600;
 }
-.about__inner .about__text .about__subtitle:before {
+.about__inner .about__text .about__title {
+  margin-bottom: 20px;
+}
+.about__inner .about__text .about__desc {
+  line-height: 26px;
+}
+
+.about__subtitle:before,
+.advantages__choice-subtitle:before {
   content: "";
   position: absolute;
   top: -23px;
@@ -273,16 +279,6 @@ a:active {
   width: 30px;
   height: 4px;
   background-color: #f6a937;
-}
-.about__inner .about__text .about__title {
-  font-family: "Raleway", sans-serif;
-  font-size: 43px;
-  line-height: 53px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-.about__inner .about__text .about__desc {
-  line-height: 26px;
 }
 
 .about__call {
@@ -372,11 +368,13 @@ a:active {
 }
 .services__slider-inner .services__slider-offer-img {
   height: 230px;
+  width: 100%;
   margin-bottom: 25px;
   overflow: hidden;
-  text-align: center;
+  position: relative;
 }
 .services__slider-inner .services__slider-offer-img .services__slider-img {
+  position: absolute;
   width: 100%;
   height: auto;
 }
@@ -459,6 +457,119 @@ a:active {
   right: -80px;
 }
 
+/*advantages section*/
+.features {
+  background-color: #1175b7;
+  padding: 70px 0;
+}
+.features__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.features__item {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 25%;
+}
+.features__item-icon {
+  margin-bottom: 15px;
+}
+.features__item-desc {
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.features__item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.advantages__choice-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 115px;
+  margin-bottom: 100px;
+}
+.advantages__choice-inner .advantages__choice-img {
+  margin-right: 55px;
+  max-width: 480px;
+}
+.advantages__choice-inner .advantages__choice-img img {
+  width: 100%;
+  height: auto;
+}
+.advantages__choice-inner .advantages__choice-text {
+  padding-top: 50px;
+}
+.advantages__choice-inner .advantages__choice-subtitle {
+  color: #1175b7;
+  margin-bottom: 10px;
+  position: relative;
+}
+.advantages__choice-inner .advantages__choice-title {
+  color: #1175b7;
+  margin-bottom: 40px;
+}
+
+.advantages__choice-reasons {
+  margin-bottom: 25px;
+}
+.advantages__choice-reasons .advantages__choice-reason {
+  padding-left: 30px;
+  color: #414141;
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.advantages__choice-reasons .advantages__choice-reason:before,
+.advantages__choice-reasons .advantages__choice-reason:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.advantages__choice-reasons .advantages__choice-reason:before {
+  content: "✔";
+  font-size: 14px;
+  line-height: 55px;
+  color: #f6a937;
+  left: 3px;
+}
+.advantages__choice-reasons .advantages__choice-reason:after {
+  content: "";
+  border: 1px solid #f6a937;
+  width: 16px;
+  height: 16px;
+}
+
+.advantages__choice-btn {
+  padding: 25px 20px 25px 75px;
+  max-width: 270px;
+  white-space: normal;
+  font-size: 18px;
+  position: relative;
+}
+
+.advantages__choice-btn:before {
+  content: "";
+  background-image: url(../images/advantages-icon-btn.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .services__slider-inner {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 1024px) {
   .about__inner {
     background-image: none;
@@ -536,6 +647,11 @@ a:active {
   .about__inner .about__call {
     padding: 30px 15px 30px 50px;
   }
+
+  .services {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 @media screen and (max-width: 530px) {
   .header__top-inner {
@@ -573,6 +689,16 @@ a:active {
     bottom: 65px;
     left: 50%;
     transform: translate(-50%);
+  }
+
+  .services__slider-inner .services__slider-offer-img {
+    height: 61vw;
+    margin-bottom: 10px;
+  }
+
+  .services__slider-inner .services__slider-title {
+    line-height: 45px;
+    margin-bottom: 10px;
   }
 }
 

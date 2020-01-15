@@ -24,5 +24,20 @@ $('.services__slider').slick({
 	prevArrow:
 		'<button type="button" class="services__slider-button services-prev">&#xf053;</button>',
 	nextArrow:
-		'<button type="button" class="services__slider-button services-next">&#xf054;</button>'
+		'<button type="button" class="services__slider-button services-next">&#xf054;</button>',
+	responsive: [
+		{
+			breakpoint: 1440,
+			settings: {
+				slidesToShow: 2,
+				arrows: false
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1
+			}
+		}
+	]
 });

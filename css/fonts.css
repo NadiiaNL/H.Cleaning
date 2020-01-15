@@ -25,7 +25,15 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-chevron-left:before {
+	content: '\f053';
+}
+.icon-check:before {
+	content: '\f00c';
+}
+.icon-chevron-right:before {
+	content: '\f054';
+}
 .icon-twitter:before {
 	content: '\f099';
 }

@@ -1,14 +1,14 @@
 $primary-font: 'Josefin Sans', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 $icon-font: 'icomoon';
+$intro-slider-font: 'Nunito', sans-serif;
 $primary-color-text: #fff;
 $secondary-color-text: #7e7d7d;
-$intro-slider-font: 'Nunito', sans-serif;
 $intro-slider-color-dots: #767676;
-$services-bg: #f9f5f2;
 $title-color: #414141;
 $services-slider-color: #8d8c8c;
 $primary-bg: #1175b7;
+$services-bg: #f9f5f2;
 $link-bg: #f6a937;
 body {
 	font-family: $primary-font;
@@ -249,33 +249,28 @@ a:active {
 			border-left: 30px solid $primary-color-text;
 			border-bottom: 30px solid $primary-color-text;
 			.about__subtitle {
-				font-family: $secondary-font;
-				line-height: 20px;
 				position: relative;
 				margin-bottom: 10px;
-				font-weight: 600;
 			}
-			.about__subtitle:before {
-				content: '';
-				position: absolute;
-				top: -23px;
-				left: 0;
-				width: 30px;
-				height: 4px;
-				background-color: $link-bg;
-			}
+
 			.about__title {
-				font-family: $secondary-font;
-				font-size: 43px;
-				line-height: 53px;
 				margin-bottom: 20px;
-				font-weight: 600;
 			}
 			.about__desc {
 				line-height: 26px;
 			}
 		}
 	}
+}
+.about__subtitle:before,
+.advantages__choice-subtitle:before {
+	content: '';
+	position: absolute;
+	top: -23px;
+	left: 0;
+	width: 30px;
+	height: 4px;
+	background-color: $link-bg;
 }
 .about__call {
 	background-color: $link-bg;
@@ -357,10 +352,16 @@ a:active {
 	color: $services-slider-color;
 	.services__slider-offer-img {
 		height: 230px;
+		width: 100%;
 		margin-bottom: 25px;
 		overflow: hidden;
-		text-align: center;
+		position: relative;
+
 		.services__slider-img {
+			position: absolute;
+			// top: 50%;
+			// left: 50%;
+			// transform: translate(-50%, -50%);
 			width: 100%;
 			height: auto;
 		}
@@ -439,6 +440,115 @@ a:active {
 .services-next {
 	right: -80px;
 }
+/*advantages section*/
+.features {
+	background-color: $primary-bg;
+	padding: 70px 0;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		text-align: center;
+		margin-bottom: 10px;
+		width: 25%;
+
+		&-icon {
+			margin-bottom: 15px;
+		}
+		&-desc {
+			font-size: 27px;
+			font-weight: 600;
+			line-height: 30px;
+			margin-bottom: 10px;
+		}
+	}
+	&__item:not(:last-child) {
+		border-right: 1px solid rgba($primary-color-text, 0.5);
+	}
+}
+.advantages__choice-inner {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 115px;
+	margin-bottom: 100px;
+	.advantages__choice-img {
+		margin-right: 55px;
+		max-width: 480px;
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.advantages__choice-text {
+		padding-top: 50px;
+	}
+	.advantages__choice-subtitle {
+		color: $primary-bg;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.advantages__choice-title {
+		color: $primary-bg;
+		margin-bottom: 40px;
+	}
+}
+.advantages__choice-reasons {
+	margin-bottom: 25px;
+	.advantages__choice-reason {
+		padding-left: 30px;
+		color: $title-color;
+		font-size: 20px;
+		line-height: 20px;
+		position: relative;
+		margin-bottom: 15px;
+	}
+	.advantages__choice-reason:before,
+	.advantages__choice-reason:after {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	.advantages__choice-reason:before {
+		content: '\2714';
+		font-size: 14px;
+		line-height: 55px;
+		color: $link-bg;
+		left: 3px;
+	}
+	.advantages__choice-reason:after {
+		content: '';
+		border: 1px solid $link-bg;
+		width: 16px;
+		height: 16px;
+	}
+}
+.advantages__choice-btn {
+	padding: 25px 20px 25px 75px;
+	max-width: 270px;
+	white-space: normal;
+	font-size: 18px;
+	position: relative;
+}
+.advantages__choice-btn:before {
+	content: '';
+	background-image: url(../images/advantages-icon-btn.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 46px;
+	height: 46px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10px;
+}
+@media screen and (max-width: 1440px) {
+	.services__slider-inner {
+		max-width: 450px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
 @media screen and (max-width: 1024px) {
 	.about__inner {
 		background-image: none;
@@ -510,6 +620,10 @@ a:active {
 			padding: 30px 15px 30px 50px;
 		}
 	}
+	.services {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 530px) {
@@ -545,5 +659,14 @@ a:active {
 			left: 50%;
 			transform: translate(-50%);
 		}
+	}
+
+	.services__slider-inner .services__slider-offer-img {
+		height: 61vw;
+		margin-bottom: 10px;
+	}
+	.services__slider-inner .services__slider-title {
+		line-height: 45px;
+		margin-bottom: 10px;
 	}
 }
