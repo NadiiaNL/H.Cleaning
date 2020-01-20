@@ -49,3 +49,12 @@
 .icon-youtube-play:before {
 	content: '\f16a';
 }
+.icon-user:before {
+	content: '\f007';
+}
+.icon-commenting-o:before {
+	content: '\f27b';
+}
+.icon-heart-o:before {
+	content: '\f08a';
+}

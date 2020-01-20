@@ -374,21 +374,200 @@
           your space including home.</h4>
       </div>
 
-      <nav class="project__nav">
-        <a href="#" class="project__nav-item">All Project</a>
-        <a href="#" class="project__nav-item">House</a>
-        <a href="#" class="project__nav-item">Office</a>
-        <a href="#" class="project__nav-item">Garden</a>
-        <a href="#" class="project__nav-item">Apartment</a>
+      <nav class="project__nav" id="project__nav">
+        <button href="#" class="project__nav-item project__nav-item--active" onclick="filterSelection('all')">All
+          Project</a>
+          <button href="#" class="project__nav-item" onclick="filterSelection('house')">House</button>
+          <button href="#" class="project__nav-item" onclick="filterSelection('office')">Office</button>
+          <button href="#" class="project__nav-item" onclick="filterSelection('garden')">Garden</button>
+          <button href="#" class="project__nav-item" onclick="filterSelection('apartment')">Apartment</button>
       </nav>
       <div class="project__gallery">
 
-        <img class="project__gallery-item" src="./images/project-gallery-1.jpg" alt="cleaning office">
-        <img class="project__gallery-item" src="./images/project-gallery-2.jpg" alt="cleaning office">
-        <img class="project__gallery-item" src="./images/project-gallery-3.jpg" alt="cleaning house">
-        <img class="project__gallery-item" src="./images/project-gallery-4.jpg" alt="cleaning house">
-        <img class="project__gallery-item" src="./images/project-gallery-5.jpg" alt="cleaning office">
-        <img class="project__gallery-item" src="./images/project-gallery-6.jpg" alt="cleaning office">
+        <img class="project__gallery-item office" src="./images/project-gallery-1.jpg" alt="cleaning office">
+        <img class="project__gallery-item office" src="./images/project-gallery-2.jpg" alt="cleaning office">
+        <img class="project__gallery-item house" src="./images/project-gallery-3.jpg" alt="cleaning house">
+        <img class="project__gallery-item garden" src="./images/services-img3.jpg" alt="cleaning garden">
+        <img class="project__gallery-item house" src="./images/project-gallery-5.jpg" alt="cleaning office">
+        <img class="project__gallery-item apartment" src="./images/project-gallery-6.jpg" alt="cleaning apartment">
+      </div>
+    </div>
+  </section>
+  <section class="delivery">
+    <div class="delivery__inner-bg">
+      <div class="content">
+        <div class="delivery__inner">
+          <div class="delivery__order">
+            <h3 class="delivery__order-title title">
+              Delivering the Best Service
+              Solution to Our Client
+            </h3>
+            <a href="" class="delivery__order-btn">
+              Book Today
+            </a>
+          </div>
+          <div class="delivery__reviews-slider-text reviews-slider-text">
+            <div class="reviews-slider-text__item">
+              <p class="reviews-slider-text__item-desc">
+                This is due to their exelent service, company
+                pricing and customer support.it,s throughty
+                refresing to get such a personal touch.
+              </p>
+              <div class="reviews-slider-text__item-author">
+                - Zahir Hasan
+              </div>
+              <div class="reviews-slider-text__item-date">
+                03 / 07
+              </div>
+            </div>
+          </div>
+          <div class="delivery__reviews-slider-photos reviews-slider-photos">
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-1.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-2.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-3.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-1.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-2.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+            <div class="reviews-slider-photos__item">
+
+              <div class="reviews-slider-photos__item-photo">
+                <div class="reviews-slider-photos__item-photo-shadow"></div>
+                <img src="./images/delivery-slider-img-3.jpg" alt="photo reviews cleaning">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blog">
+    <div class="content">
+      <div class="blog__text">
+        <h3 class="blog__text-title title">Latest Blog Posts</h3>
+        <h4 class="blog__text-subtitle subtitle subtitle--bottom">
+          Our company is latest at cleaning servicing company We can clean
+          your space including home.
+        </h4>
+      </div>
+      <div class="blog__articles">
+        <div class="blog__article blog__article--big">
+          <img src="./images/blog__img1-big.jpg" alt="The Shore of this Uncharted" class="blog__article-img">
+          <span class="blog__article-date">April 15, 2019</span>
+          <h4 class="blog__article-title">
+            The Shore of this Uncharted
+          </h4>
+          <div class="blog__article-icons">
+            <div class="blog__article-icon user">
+              <!-- <svg class="icon icon-user">
+                <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg> -->
+              Admin
+            </div>
+            <div class="blog__article-icon comments">
+              25
+            </div>
+            <div class="blog__article-icon likes">
+              15
+            </div>
+          </div>
+          <p class="blog__article-desc">
+            A wonderful serenity has taken possession of my entire soul, like these sweet
+            which I enjoy with my whole heart. I am alone, and feel.taken possession of
+            my entire soul, like these sweet.
+          </p>
+          <a href="#" class="blog__article-btn-more">
+            read more
+          </a>
+        </div>
+        <div class="blog__article-right">
+          <div class="blog__article blog__article--horizont">
+            <img src="./images/blog__img2-small.jpg" alt="The Shore of this Uncharted" class="blog__article-img">
+            <span class="blog__article-date">June 15, 2019</span>
+            <div class="blog__article-inner">
+              <h4 class="blog__article-title">
+                The Beat just Drum
+              </h4>
+              <div class="blog__article-icons">
+                <div class="blog__article-icon user">
+                  Admin
+                </div>
+                <div class="blog__article-icon comments">
+                  25
+                </div>
+                <div class="blog__article-icon likes">
+                  15
+                </div>
+              </div>
+              <p class="blog__article-desc">
+                A wonderful serenity has brokend
+                which I enjoy with my whole my ti
+                entire soul, like these sweet. We a
+                Working Clealy and fress.
+              </p>
+              <a href="#" class="blog__article-btn-more">
+                read more
+              </a>
+            </div>
+          </div>
+          <div class="blog__article blog__article--horizont">
+            <img src="./images/blog__img3-small.jpg" alt="The Shore of this Uncharted" class="blog__article-img">
+            <span class="blog__article-date">May 15, 2019</span>
+            <div class="blog__article-inner">
+              <h4 class="blog__article-title">
+                The Shore are Lady
+              </h4>
+              <div class="blog__article-icons">
+                <div class="blog__article-icon user">
+                  Admin
+                </div>
+                <div class="blog__article-icon comments">
+                  25
+                </div>
+                <div class="blog__article-icon likes">
+                  15
+                </div>
+              </div>
+              <p class="blog__article-desc">
+                A wonderful serenity has brokend
+                which I enjoy with my whole my ti
+                entire soul, like these sweet. We a
+                Working Clealy and fress.
+              </p>
+              <a href="#" class="blog__article-btn-more">
+                read more
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

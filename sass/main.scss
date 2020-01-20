@@ -10,6 +10,7 @@ $services-slider-color: #8d8c8c;
 $primary-bg: #1175b7;
 $services-bg: #f9f5f2;
 $link-bg: #f6a937;
+$read-more-link: #313131;
 body {
 	font-family: $primary-font;
 	font-size: 16px;
@@ -573,15 +574,19 @@ a:active {
 	background-color: $link-bg;
 }
 .project__nav {
-	text-align: center;
 	margin-bottom: 30px;
-	a.project__nav-item {
+	display: flex;
+	justify-content: center;
+	.project__nav-item {
 		color: $intro-slider-color-dots;
 		font-weight: 600;
-		display: inline-block;
 		padding: 7px 10px;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		transition: 0.4s;
 	}
-	a.project__nav-item:hover {
+	.project__nav-item:hover {
 		background-color: $link-bg;
 		color: $primary-color-text;
 		border-radius: 4px;
@@ -598,8 +603,194 @@ a:active {
 	margin-left: -15px;
 	margin-right: -15px;
 	.project__gallery-item {
+		display: none;
 		margin: 0 15px 30px;
 		width: calc(33.33% - 30px);
+		// position: relative;
+	}
+}
+.project__gallery-item.show {
+	display: block;
+}
+/*Delivery section*/
+.delivery {
+	background-image: url(../images/delivery-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	min-height: 670px;
+	margin-bottom: 360px;
+	&__inner-bg {
+		background-color: rgba($link-bg, 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.delivery__inner {
+			position: relative;
+			min-height: 670px;
+		}
+	}
+}
+.delivery__order {
+	padding-top: 100px;
+	text-align: center;
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto 40px;
+
+	&-title {
+		font-size: 45px;
+		margin-bottom: 40px;
+	}
+	&-btn {
+		display: inline-block;
+		background-color: $primary-color-text;
+		padding: 15px 45px;
+		border-radius: 4px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	a.delivery__order-btn {
+		color: $link-bg;
+	}
+}
+.reviews-slider-text {
+	background-color: $primary-bg;
+	min-height: 550px;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	.reviews-slider-text__item {
+		padding: 220px 20px 20px;
+		text-align: center;
+		height: 100%;
+		&-desc {
+			font-size: 35px;
+			font-weight: 700;
+			line-height: 48px;
+			max-width: 750px;
+			margin: 0 auto 35px;
+		}
+		&-author {
+			font-size: 22px;
+			line-height: 48px;
+			margin-right: 35px;
+			margin-bottom: 60px;
+		}
+		&-date {
+			text-align: right;
+			margin-top: auto;
+			font-size: 18px;
+		}
+	}
+}
+.reviews-slider-photos {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+.reviews-slider-photos__item-photo {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: 25px;
+	margin-right: 25px;
+	& img {
+		width: 100%;
+		height: 100%;
+	}
+}
+/*Blog*/
+.blog {
+	color: $title-color;
+	margin-bottom: 100px;
+	&__articles {
+		display: flex;
+		justify-content: space-between;
+		.blog__article {
+			position: relative;
+			&-img {
+				margin-bottom: 15px;
+			}
+			&-date {
+				position: absolute;
+				top: 15px;
+				left: 0;
+				color: $primary-color-text;
+				padding: 5px 6px;
+				background-color: $link-bg;
+				border-radius: 0 3px 3px 0;
+			}
+			&-title {
+				font-size: 22px;
+				font-weight: 700;
+				font-family: $secondary-font;
+				margin-bottom: 15px;
+			}
+			&-icons {
+				display: flex;
+				font-size: 14px;
+				margin-bottom: 15px;
+				color: $secondary-color-text;
+				.blog__article-icon {
+					padding-left: 20px;
+					margin-right: 20px;
+				}
+				.icon {
+					stroke: $link-bg;
+				}
+			}
+			&-desc {
+				margin-bottom: 10px;
+				color: $secondary-color-text;
+			}
+			&-btn-more {
+				color: $read-more-link;
+				text-transform: uppercase;
+				line-height: 24px;
+				font-family: $secondary-font;
+				font-weight: 600;
+			}
+		}
+	}
+	&__text {
+		text-align: center;
+		&-title {
+			max-width: 550px;
+			margin: 0 auto 25px;
+		}
+		&-subtitle {
+			margin-bottom: 60px;
+		}
+	}
+}
+.blog__article--big {
+	width: 50%;
+	margin-right: 25px;
+}
+.blog__article-right {
+	margin-left: auto;
+	width: 45%;
+	.blog__article--horizont {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 30px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid rgba($services-slider-color, 0.7);
+		.blog__article-inner {
+			max-width: 245px;
+			margin-left: 15px;
+		}
+	}
+	.blog__article--horizont:last-child {
+		border: none;
 	}
 }
 @media screen and (max-width: 1440px) {
