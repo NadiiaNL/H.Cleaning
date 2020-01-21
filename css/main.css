@@ -271,7 +271,8 @@ a:active {
 }
 
 .about__subtitle:before,
-.advantages__choice-subtitle:before {
+.advantages__choice-subtitle:before,
+.book__text-subtitle:before {
   content: "";
   position: absolute;
   top: -23px;
@@ -282,6 +283,10 @@ a:active {
 }
 
 .about__call {
+  margin-left: auto;
+}
+
+.call {
   background-color: #f6a937;
   max-width: 445px;
   width: 100%;
@@ -289,24 +294,23 @@ a:active {
   border-radius: 3px;
   font-weight: 700;
   display: block;
-  margin-left: auto;
 }
-.about__call-to {
+.call-to {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   display: block;
   margin-bottom: 10px;
 }
-.about__call-number {
+.call-number {
   font-size: 35px;
-  margin-bottom: 10px;
   display: block;
   position: relative;
   max-width: 230px;
   width: 100%;
   white-space: nowrap;
+  margin-bottom: 10px;
 }
-.about__call-number:before {
+.call-number:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -739,6 +743,7 @@ a:active {
 /*Blog*/
 .blog {
   color: #414141;
+  margin-bottom: 100px;
 }
 .blog__articles {
   display: flex;
@@ -822,6 +827,68 @@ a:active {
 }
 .blog__article-right .blog__article--horizont:last-child {
   border: none;
+}
+
+/*Book*/
+.book {
+  margin-bottom: 115px;
+}
+.book__inner {
+  background-image: url("../images/book-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.book__inner .book__right {
+  margin-left: auto;
+  max-width: 570px;
+  color: #414141;
+}
+.book__inner .book__right .book__text {
+  background-color: #fce5c3;
+  border-bottom: 30px solid #fff;
+  padding: 75px 60px 40px 60px;
+}
+.book__inner .book__right .book__text-subtitle {
+  position: relative;
+  margin-bottom: 10px;
+}
+.book__inner .book__right .book__text-title {
+  margin-bottom: 40px;
+}
+.book__inner .book__right .book__text .book__form input {
+  padding: 20px 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.book__inner .book__right .book__text .book__form input::placeholder {
+  color: #414141;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+.book__inner .book__right .book__text .book__form input:focus {
+  border: 1px solid #f6a937;
+}
+.book__inner .book__right .book__text .book__form-btn {
+  border: none;
+  outline: none;
+  background-color: #f6a937;
+  padding: 15px 30px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.book__inner .book__right .book__text,
+.book__inner .book__right .book__call {
+  border-left: 30px solid #fff;
+}
+.book__inner .book__right .book__call {
+  margin-left: auto;
+  max-width: 480px;
 }
 
 @media screen and (max-width: 1440px) {

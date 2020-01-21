@@ -10,6 +10,7 @@ $services-slider-color: #8d8c8c;
 $primary-bg: #1175b7;
 $services-bg: #f9f5f2;
 $link-bg: #f6a937;
+$book-bgcolor: #fce5c3;
 $read-more-link: #313131;
 body {
 	font-family: $primary-font;
@@ -264,7 +265,8 @@ a:active {
 	}
 }
 .about__subtitle:before,
-.advantages__choice-subtitle:before {
+.advantages__choice-subtitle:before,
+.book__text-subtitle:before {
 	content: '';
 	position: absolute;
 	top: -23px;
@@ -274,6 +276,9 @@ a:active {
 	background-color: $link-bg;
 }
 .about__call {
+	margin-left: auto;
+}
+.call {
 	background-color: $link-bg;
 	max-width: 445px;
 	width: 100%;
@@ -281,7 +286,6 @@ a:active {
 	border-radius: 3px;
 	font-weight: 700;
 	display: block;
-	margin-left: auto;
 	&-to {
 		font-family: $secondary-font;
 		font-size: 18px;
@@ -290,12 +294,12 @@ a:active {
 	}
 	&-number {
 		font-size: 35px;
-		margin-bottom: 10px;
 		display: block;
 		position: relative;
 		max-width: 230px;
 		width: 100%;
 		white-space: nowrap;
+		margin-bottom: 10px;
 	}
 	&-number:before {
 		content: '';
@@ -791,6 +795,67 @@ a:active {
 	}
 	.blog__article--horizont:last-child {
 		border: none;
+	}
+}
+/*Book*/
+.book {
+	margin-bottom: 115px;
+	&__inner {
+		background-image: url('../images/book-bg.jpg');
+		background-repeat: no-repeat;
+		background-position: top left;
+		.book__right {
+			margin-left: auto;
+			max-width: 570px;
+			color: $title-color;
+			.book__text {
+				background-color: $book-bgcolor;
+				border-bottom: 30px solid $primary-color-text;
+				padding: 75px 60px 40px 60px;
+				&-subtitle {
+					position: relative;
+					margin-bottom: 10px;
+				}
+				&-title {
+					margin-bottom: 40px;
+				}
+				.book__form input {
+					padding: 20px 25px;
+					width: 100%;
+					margin-bottom: 10px;
+					outline: none;
+					border: none;
+					border-radius: 5px;
+				}
+				.book__form input::placeholder {
+					color: $title-color;
+					font-family: $primary-font;
+					font-size: 16px;
+				}
+				.book__form input:focus {
+					border: 1px solid $link-bg;
+				}
+				.book__form-btn {
+					border: none;
+					outline: none;
+					background-color: $link-bg;
+					padding: 15px 30px;
+					border-radius: 4px;
+					color: $primary-color-text;
+					font-size: 18px;
+					font-weight: 600;
+					margin-top: 10px;
+				}
+			}
+			.book__text,
+			.book__call {
+				border-left: 30px solid $primary-color-text;
+			}
+			.book__call {
+				margin-left: auto;
+				max-width: 480px;
+			}
+		}
 	}
 }
 @media screen and (max-width: 1440px) {
