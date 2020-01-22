@@ -173,6 +173,11 @@ a:active {
 	white-space: nowrap;
 	border-radius: 3px;
 	display: inline-block;
+	opacity: 1;
+	transition: 0.5s;
+}
+.btn-orange:hover {
+	opacity: 0.9;
 }
 .header__btn-orange {
 	padding: 15px;
@@ -314,11 +319,12 @@ a:active {
 		content: '';
 		position: absolute;
 		bottom: 0;
-		left: -75px;
+		left: -80px;
 		width: 70px;
-		height: 60px;
+		height: 70px;
 		background-image: url('../images/about-call.png');
 		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 /*Services section*/
@@ -1076,12 +1082,17 @@ a:active {
 		font-size: 12px;
 		min-height: 500px;
 	}
+	.about,
+	.intro {
+		margin-bottom: 0;
+	}
 	.about__inner {
 		margin-left: -15px;
 		margin-right: -15px;
 		.about__text {
 			padding: 45px 20px;
 			min-height: auto;
+			margin-bottom: 0;
 			.about__title {
 				font-size: 33px;
 				line-height: 33px;
@@ -1124,12 +1135,21 @@ a:active {
 		}
 	}
 	.about__inner .about__call {
-		padding-top: 80px;
-		.about__call-number:before {
-			bottom: 65px;
-			left: 50%;
-			transform: translate(-50%);
-		}
+		padding-top: 60px;
+		padding-bottom: 20px;
+	}
+	.about__call-number:before {
+		bottom: 65px;
+		left: 50%;
+		transform: translate(-50%);
+		width: 40px;
+		height: 40px;
+	}
+	.about__inner .about__text .about__title {
+		font-size: 27px;
+	}
+	.about__inner .about__text .about__subtitle {
+		font-size: 15px;
 	}
 
 	.services__slider-inner .services__slider-offer-img {
