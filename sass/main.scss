@@ -186,7 +186,8 @@ a:active {
 .intro {
 	margin-bottom: 120px;
 }
-.intro__slider {
+.intro__slider,
+.services__slider {
 	position: relative;
 	.slick-dots {
 		display: flex;
@@ -342,6 +343,16 @@ a:active {
 	&__title {
 		color: $title-color;
 		margin-bottom: 45px;
+	}
+}
+.services__slider .slick-dots {
+	top: -8%;
+	& button {
+		background-color: rgba($intro-slider-color-dots, 0.3);
+	}
+	& li.slick-active button:hover,
+	& button:hover {
+		background-color: $primary-bg;
 	}
 }
 .subtitle {
@@ -1137,6 +1148,7 @@ a:active {
 	.about__inner .about__call {
 		padding-top: 60px;
 		padding-bottom: 20px;
+		padding-left: 15px;
 	}
 	.about__call-number:before {
 		bottom: 65px;
@@ -1145,10 +1157,10 @@ a:active {
 		width: 40px;
 		height: 40px;
 	}
-	.about__inner .about__text .about__title {
+	.title {
 		font-size: 27px;
 	}
-	.about__inner .about__text .about__subtitle {
+	.subtitle {
 		font-size: 15px;
 	}
 
@@ -1159,5 +1171,8 @@ a:active {
 	.services__slider-inner .services__slider-title {
 		line-height: 45px;
 		margin-bottom: 10px;
+	}
+	.services__subtitle {
+		margin-bottom: 0;
 	}
 }

@@ -191,17 +191,20 @@ a:active {
   margin-bottom: 120px;
 }
 
-.intro__slider {
+.intro__slider,
+.services__slider {
   position: relative;
 }
-.intro__slider .slick-dots {
+.intro__slider .slick-dots,
+.services__slider .slick-dots {
   display: flex;
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translateX(-50%);
 }
-.intro__slider .slick-dots button {
+.intro__slider .slick-dots button,
+.services__slider .slick-dots button {
   outline: none;
   border: 0;
   font-size: 0;
@@ -211,7 +214,9 @@ a:active {
   width: 7px;
   height: 12px;
 }
-.intro__slider .slick-dots li.slick-active button:hover, .intro__slider .slick-dots button:hover {
+.intro__slider .slick-dots li.slick-active button:hover, .intro__slider .slick-dots button:hover,
+.services__slider .slick-dots li.slick-active button:hover,
+.services__slider .slick-dots button:hover {
   background-color: #fff;
 }
 
@@ -353,6 +358,16 @@ a:active {
 .services__title {
   color: #414141;
   margin-bottom: 45px;
+}
+
+.services__slider .slick-dots {
+  top: -8%;
+}
+.services__slider .slick-dots button {
+  background-color: rgba(118, 118, 118, 0.3);
+}
+.services__slider .slick-dots li.slick-active button:hover, .services__slider .slick-dots button:hover {
+  background-color: #1175b7;
 }
 
 .subtitle {
@@ -1182,6 +1197,7 @@ a:active {
   .about__inner .about__call {
     padding-top: 60px;
     padding-bottom: 20px;
+    padding-left: 15px;
   }
 
   .about__call-number:before {
@@ -1192,11 +1208,11 @@ a:active {
     height: 40px;
   }
 
-  .about__inner .about__text .about__title {
+  .title {
     font-size: 27px;
   }
 
-  .about__inner .about__text .about__subtitle {
+  .subtitle {
     font-size: 15px;
   }
 
@@ -1208,6 +1224,10 @@ a:active {
   .services__slider-inner .services__slider-title {
     line-height: 45px;
     margin-bottom: 10px;
+  }
+
+  .services__subtitle {
+    margin-bottom: 0;
   }
 }
 

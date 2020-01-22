@@ -36,13 +36,15 @@ $('.services__slider').slick({
 			breakpoint: 1440,
 			settings: {
 				slidesToShow: 2,
-				arrows: false
+				arrows: false,
+				dots: true
 			}
 		},
 		{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 1
+				slidesToShow: 1,
+				dots: true
 			}
 		}
 	]
