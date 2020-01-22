@@ -6,6 +6,12 @@ function myFunction(x) {
 	} else {
 		y.className = 'header__menu menu';
 	}
+	var z = document.getElementById('btn-orange');
+	if (z.className === 'header__btn-orange btn-orange') {
+		z.className += ' responsive-btn';
+	} else {
+		z.className = 'header__btn-orange btn-orange';
+	}
 }
 $('.intro__slider').slick({
 	infinite: true,
@@ -81,7 +87,7 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById('project__nav');
-var btns = btnContainer.getElementsByClassName('project__nav-item');
+var btns = document.getElementsByClassName('project__nav-item');
 for (var i = 0; i < btns.length; i++) {
 	btns[i].addEventListener('click', function () {
 		var current = document.getElementsByClassName('project__nav-item--active');

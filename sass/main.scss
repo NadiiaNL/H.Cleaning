@@ -147,17 +147,25 @@ a:active {
 	left: 0;
 	text-align: left;
 	background-color: $primary-color-text;
-	padding-bottom: 5px;
 	z-index: 6;
 	& .menu__link {
 		margin-left: 0;
 		margin-right: 0;
-		padding-left: 15px;
+		padding: 10px 10px 10px 15px;
 	}
 	& .menu__link:hover {
 		color: $link-bg;
 		background-color: rgba($primary-bg, 0.2);
 	}
+}
+.header__bottom-inner .btn-orange.responsive-btn {
+	display: block;
+	position: absolute;
+	top: 294%;
+	left: 0px;
+	z-index: 6;
+	width: 100%;
+	text-align: center;
 }
 .btn-orange {
 	color: $primary-color-text;

@@ -146,17 +146,26 @@ a:active {
   left: 0;
   text-align: left;
   background-color: #fff;
-  padding-bottom: 5px;
   z-index: 6;
 }
 .header__bottom-inner .header__menu.responsive .menu__link {
   margin-left: 0;
   margin-right: 0;
-  padding-left: 15px;
+  padding: 10px 10px 10px 15px;
 }
 .header__bottom-inner .header__menu.responsive .menu__link:hover {
   color: #f6a937;
   background-color: rgba(17, 117, 183, 0.2);
+}
+
+.header__bottom-inner .btn-orange.responsive-btn {
+  display: block;
+  position: absolute;
+  top: 294%;
+  left: 0px;
+  z-index: 6;
+  width: 100%;
+  text-align: center;
 }
 
 .btn-orange {
