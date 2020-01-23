@@ -26,8 +26,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-user:before {
-	content: '\f007';
+.icon-user-o:before {
+	content: '\f2c0';
 }
 .icon-check:before {
 	content: '\f00c';
