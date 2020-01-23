@@ -1168,12 +1168,37 @@ a:active {
     width: calc(50% - 30px);
   }
 
+  .blog {
+    margin-bottom: 5px;
+  }
+
   .blog__articles .blog__article-title {
     font-size: 18px;
   }
 
   .blog__articles .blog__article-btn-more {
     font-size: 14px;
+  }
+
+  .book__inner {
+    background-image: none;
+  }
+  .book__inner .book__right {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .book__inner .book__right .book__text,
+.book__inner .book__right .book__call {
+    border: 0;
+  }
+  .book__inner .book__right .book__call {
+    margin-top: 25px;
+    max-width: 100%;
+    text-align: center;
+    padding: 50px 35px 50px 90px;
+  }
+  .book__inner .book__right .book__call-number {
+    margin: auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1259,7 +1284,7 @@ a:active {
   .blog__article--big {
     width: 100%;
     margin-bottom: 15px;
-    margin-right: 25px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1276,6 +1301,10 @@ a:active {
 
   .blog__article--horizont img {
     margin-right: auto;
+  }
+
+  .book__inner .book__right .book__text {
+    padding: 45px 20px 20px 20px;
   }
 }
 @media screen and (max-width: 530px) {
@@ -1327,6 +1356,16 @@ a:active {
     font-size: 14px;
   }
 }
+@media screen and (max-width: 425px) {
+  .book__inner .book__right .book__text-title {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+
+  .book__inner .book__right .book__text .book__form input {
+    padding: 15px 15px;
+  }
+}
 @media screen and (max-width: 375px) {
   .intro__slider-item {
     font-size: 7px;
@@ -1336,13 +1375,15 @@ a:active {
     line-height: 40px;
   }
 
-  .about__inner .about__call {
+  .about__inner .about__call,
+.book__inner .book__right .book__call {
     padding-top: 60px;
     padding-bottom: 20px;
     padding-left: 15px;
   }
 
-  .about__call-number:before {
+  .about__call-number:before,
+.book__call-number:before {
     bottom: 65px;
     left: 50%;
     transform: translate(-50%);
