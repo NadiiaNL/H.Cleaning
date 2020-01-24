@@ -396,7 +396,7 @@
     </div>
   </section>
 
-  <!-- <section class="delivery">
+  <section class="delivery">
     <div class="delivery__inner-bg">
       <div class="content">
         <div class="delivery__inner">
@@ -409,8 +409,8 @@
               Book Today
             </a>
           </div>
-          <div class="delivery__reviews-slider-text reviews-slider-text">
-            <div class="reviews-slider-text__item">
+          <div class="delivery__reviews-slider-text reviews-slider-text" id="slider-container">
+            <div class="reviews-slider-text__item fade slides">
               <p class="reviews-slider-text__item-desc">
                 This is due to their exelent service, company
                 pricing and customer support.it,s throughty
@@ -423,55 +423,85 @@
                 03 / 07
               </div>
             </div>
+            <div class="reviews-slider-text__item fade slides">
+              <p class="reviews-slider-text__item-desc">
+                This is due to their exelent service, company
+                pricing and customer support.it,s throughty
+                refresing to get such a personal touch.
+              </p>
+              <div class="reviews-slider-text__item-author">
+                - Zara Tukman
+              </div>
+              <div class="reviews-slider-text__item-date">
+                06 / 07
+              </div>
+            </div>
+            <div class="reviews-slider-text__item fade slides">
+              <p class="reviews-slider-text__item-desc">
+                This is due to their exelent service, company
+                pricing and customer support.it,s throughty
+                refresing to get such a personal touch.
+              </p>
+              <div class="reviews-slider-text__item-author">
+                - Kate Robinson
+              </div>
+              <div class="reviews-slider-text__item-date">
+                05 / 07
+              </div>
+            </div>
+
+            <a class="delivery__reviews-slider-next arrow-next" onclick="slidesPlus(1)">&#xf054;</a>
+            <a class="delivery__reviews-slider-prev arrow-prev" onclick="slidesPlus(-1)">&#xf053;</a>
           </div>
-          <div class="delivery__reviews-slider-photos reviews-slider-photos">
-            <div class="reviews-slider-photos__item">
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+          <div class="delivery__reviews-slider-dots reviews-slider-dots">
+            <div class="reviews-slider-dots__item active dot" onclick='currentSlide(1)'>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-1.jpg" alt="photo reviews cleaning">
               </div>
             </div>
-            <div class="reviews-slider-photos__item">
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+            <div class="reviews-slider-dots__item dot" onclick='currentSlide(2)'>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-2.jpg" alt="photo reviews cleaning">
               </div>
             </div>
-            <div class="reviews-slider-photos__item">
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+            <div class="reviews-slider-dots__item dot" onclick='currentSlide(3)'>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-3.jpg" alt="photo reviews cleaning">
               </div>
             </div>
-            <div class="reviews-slider-photos__item">
+            <!-- <div class="reviews-slider-dots__item" onclick='currentSlide(4)'>
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-1.jpg" alt="photo reviews cleaning">
               </div>
             </div>
-            <div class="reviews-slider-photos__item">
+            <div class="reviews-slider-dots__item" onclick='currentSlide(5)'>
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-2.jpg" alt="photo reviews cleaning">
               </div>
             </div>
-            <div class="reviews-slider-photos__item">
+            <div class="reviews-slider-dots__item" onclick='currentSlide(6)'>
 
-              <div class="reviews-slider-photos__item-photo">
-                <div class="reviews-slider-photos__item-photo-shadow"></div>
+              <div class="reviews-slider-dots__item-photo">
+                <div class="reviews-slider-dots__item-photo-shadow"></div>
                 <img src="./images/delivery-slider-img-3.jpg" alt="photo reviews cleaning">
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
+
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section class="blog">
     <div class="content">
