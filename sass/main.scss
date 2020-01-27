@@ -630,7 +630,6 @@ a:active {
 .project__gallery {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	margin-left: -15px;
 	margin-right: -15px;
 	.project__gallery-item {
@@ -1266,13 +1265,6 @@ a:active {
 			}
 		}
 	}
-
-	// .footer__nav {
-	// 	flex-direction: column;
-	// }
-	// .footer__nav-item {
-	// 	line-height: 28px;
-	// }
 }
 @media screen and (max-width: 768px) {
 	.header__menu,
